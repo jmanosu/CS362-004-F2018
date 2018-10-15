@@ -1210,7 +1210,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 //begining of custom bugged CARDS
 
-int adventurerCard(struct gameState * state, int drawntreasure, int currentPlayer, int temphand, int z){
+int adventurerCard(struct gameState * state, int drawntreasure, int currentPlayer, int * temphand, int z){
 
   int cardDrawn = 0;
 
