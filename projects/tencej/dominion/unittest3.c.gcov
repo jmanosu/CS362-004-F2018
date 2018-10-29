@@ -1,0 +1,72 @@
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Jared Tence
+        -:    2: * tencej
+        -:    3: * CS362
+        -:    4: * unittest3 isGameOver();
+        -:    5: */
+        -:    6:
+        -:    7:
+        -:    8: #include "dominion.h"
+        -:    9: #include "dominion_helpers.h"
+        -:   10: #include <string.h>
+        -:   11: #include <stdio.h>
+        -:   12: #include <assert.h>
+        -:   13:
+        -:   14:
+       48:   15:void testisGameOver(int correct, struct gameState *state){
+       48:   16:  int result = isGameOver(state);
+       48:   17:  if(result != correct){
+    #####:   18:    printf("ERROR result %i doesn't equal correct result %i\n", result, correct);
+        -:   19:  }else{
+       48:   20:    printf("Passed result %i does match correct result %i\n", result, correct);
+        -:   21:  }
+       48:   22:}
+        -:   23:
+        1:   24:int main(){
+        1:   25:  struct gameState * cGame = newGame();
+        1:   26:  int kingdomC[10] = {estate, duchy, province, copper, silver, gold, adventurer,
+        -:   27:              council_room, feast, gardens};
+        1:   28:  initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        -:   29:  int i, j, cCard;
+        1:   30:  cCard = 0;
+        -:   31:
+        1:   32:  printf("First Test Case:\n");
+        2:   33:  for(i = 0; i < MAX_PLAYERS; i++){
+       38:   34:    for(j = 0; j < 50; j++){
+       38:   35:      if(gainCard(kingdomC[cCard], cGame, 1, i) == -1){
+        2:   36:        cCard++;
+        2:   37:        if(cCard > 9){
+    #####:   38:          i = MAX_PLAYERS;
+    #####:   39:          j = MAX_HAND;
+    #####:   40:          break;
+        -:   41:        }
+       36:   42:      }else if(cCard == 2 && supplyCount(kingdomC[cCard], cGame) == 0){
+        1:   43:        testisGameOver(1, cGame);
+        1:   44:        i = MAX_PLAYERS;
+        1:   45:        j = 50;
+        1:   46:        break;
+        -:   47:      }else{
+       35:   48:        testisGameOver(0, cGame);
+        -:   49:      }
+        -:   50:    }
+        -:   51:  }
+        -:   52:
+        -:   53:
+        1:   54:  printf("second Test Case:\n");
+        1:   55:  initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        5:   56:  for(i = 0; i < MAX_PLAYERS; i++){
+       16:   57:    for(j = 0; j < MAX_HAND; j++){
+       16:   58:      if(gainCard(kingdomC[2], cGame, 1, i) == -1){
+        4:   59:        break;
+       12:   60:      }else if(supplyCount(kingdomC[2],cGame) == 0){
+        1:   61:        testisGameOver(1, cGame);
+        -:   62:      }else{
+       11:   63:        testisGameOver(0, cGame);
+        -:   64:      }
+        -:   65:    }
+        -:   66:  }
+        -:   67:}

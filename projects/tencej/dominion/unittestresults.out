@@ -1,0 +1,397 @@
+unittest1: 
+
+Passed result 11 does match correct result 11
+Passed result 10 does match correct result 10
+Passed result 9 does match correct result 9
+Passed result 8 does match correct result 8
+Passed result 7 does match correct result 7
+Passed result 6 does match correct result 6
+Passed result 5 does match correct result 5
+Passed result 4 does match correct result 4
+Passed result 3 does match correct result 3
+Passed result 2 does match correct result 2
+Passed result 1 does match correct result 1
+Passed result 0 does match correct result 0
+Passed result 11 does match correct result 11
+Passed result 10 does match correct result 10
+Passed result 9 does match correct result 9
+Passed result 8 does match correct result 8
+Passed result 7 does match correct result 7
+Passed result 6 does match correct result 6
+Passed result 5 does match correct result 5
+Passed result 4 does match correct result 4
+Passed result 3 does match correct result 3
+Passed result 2 does match correct result 2
+Passed result 1 does match correct result 1
+Passed result 0 does match correct result 0
+Passed result 11 does match correct result 11
+Passed result 10 does match correct result 10
+Passed result 9 does match correct result 9
+Passed result 8 does match correct result 8
+Passed result 7 does match correct result 7
+Passed result 6 does match correct result 6
+Passed result 5 does match correct result 5
+Passed result 4 does match correct result 4
+Passed result 3 does match correct result 3
+Passed result 2 does match correct result 2
+Passed result 1 does match correct result 1
+Passed result 0 does match correct result 0
+Passed result 31 does match correct result 31
+Passed result 30 does match correct result 30
+Passed result 29 does match correct result 29
+Passed result 28 does match correct result 28
+Passed result 27 does match correct result 27
+Passed result 26 does match correct result 26
+Passed result 25 does match correct result 25
+Passed result 24 does match correct result 24
+Passed result 23 does match correct result 23
+Passed result 22 does match correct result 22
+Passed result 21 does match correct result 21
+Passed result 20 does match correct result 20
+Passed result 19 does match correct result 19
+Passed result 18 does match correct result 18
+Passed result 17 does match correct result 17
+Passed result 16 does match correct result 16
+Passed result 15 does match correct result 15
+Passed result 14 does match correct result 14
+Passed result 13 does match correct result 13
+Passed result 12 does match correct result 12
+Passed result 11 does match correct result 11
+Passed result 10 does match correct result 10
+Passed result 9 does match correct result 9
+Passed result 8 does match correct result 8
+Passed result 7 does match correct result 7
+Passed result 6 does match correct result 6
+Passed result 5 does match correct result 5
+Passed result 4 does match correct result 4
+Passed result 3 does match correct result 3
+Passed result 2 does match correct result 2
+Passed result 1 does match correct result 1
+Passed result 0 does match correct result 0
+Passed result 39 does match correct result 39
+Passed result 38 does match correct result 38
+Passed result 37 does match correct result 37
+Passed result 36 does match correct result 36
+Passed result 35 does match correct result 35
+Passed result 34 does match correct result 34
+Passed result 33 does match correct result 33
+Passed result 32 does match correct result 32
+unittest2: 
+
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 13 does match correct result 13
+Passed result 14 does match correct result 14
+Passed result 15 does match correct result 15
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 13 does match correct result 13
+Passed result 14 does match correct result 14
+Passed result 15 does match correct result 15
+Passed result 16 does match correct result 16
+Passed result 17 does match correct result 17
+Passed result 18 does match correct result 18
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 13 does match correct result 13
+Passed result 14 does match correct result 14
+Passed result 15 does match correct result 15
+Passed result 16 does match correct result 16
+Passed result 17 does match correct result 17
+Passed result 18 does match correct result 18
+Passed result 19 does match correct result 19
+Passed result 20 does match correct result 20
+Passed result 21 does match correct result 21
+Passed result 22 does match correct result 22
+Passed result 23 does match correct result 23
+Passed result 24 does match correct result 24
+Passed result 25 does match correct result 25
+Passed result 26 does match correct result 26
+Passed result 27 does match correct result 27
+Passed result 28 does match correct result 28
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 13 does match correct result 13
+Passed result 14 does match correct result 14
+Passed result 15 does match correct result 15
+Passed result 16 does match correct result 16
+Passed result 17 does match correct result 17
+Passed result 18 does match correct result 18
+Passed result 19 does match correct result 19
+Passed result 20 does match correct result 20
+Passed result 21 does match correct result 21
+Passed result 22 does match correct result 22
+Passed result 23 does match correct result 23
+Passed result 24 does match correct result 24
+Passed result 25 does match correct result 25
+Passed result 26 does match correct result 26
+Passed result 27 does match correct result 27
+Passed result 28 does match correct result 28
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+Passed result 13 does match correct result 13
+Passed result 14 does match correct result 14
+Passed result 15 does match correct result 15
+Passed result 16 does match correct result 16
+Passed result 17 does match correct result 17
+Passed result 18 does match correct result 18
+Passed result 19 does match correct result 19
+Passed result 20 does match correct result 20
+Passed result 21 does match correct result 21
+Passed result 22 does match correct result 22
+Passed result 23 does match correct result 23
+Passed result 24 does match correct result 24
+Passed result 25 does match correct result 25
+Passed result 26 does match correct result 26
+Passed result 27 does match correct result 27
+Passed result 28 does match correct result 28
+Passed result 29 does match correct result 29
+Passed result 30 does match correct result 30
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 1 does match correct result 1
+Passed result 2 does match correct result 2
+Passed result 3 does match correct result 3
+Passed result 4 does match correct result 4
+Passed result 5 does match correct result 5
+Passed result 6 does match correct result 6
+Passed result 7 does match correct result 7
+Passed result 8 does match correct result 8
+Passed result 9 does match correct result 9
+Passed result 10 does match correct result 10
+Passed result 11 does match correct result 11
+Passed result 12 does match correct result 12
+unittest3: 
+
+First Test Case:
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 1 does match correct result 1
+second Test Case:
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 0 does match correct result 0
+Passed result 1 does match correct result 1
+unittest4: 
+
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+cardtest1: 
+
+ERROR smithy drawing wrong amount of cards
+ERROR smithy drawing wrong amount of cards
+ERROR smithy drawing wrong amount of cards
+ERROR smithy drawing wrong amount of cards
+FAILED
+unittest2: 
+
+ERROR village drawing wrong amount of cards
+ERROR village drawing wrong amount of cards
+ERROR village drawing wrong amount of cards
+ERROR village drawing wrong amount of cards
+FAILED
+unittest3: 
+
+PASSED
+unittest4: 
+
+ERROR adventurer drawing wrong amount of cards
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+ERROR copper gold or silver was discarded
+FAILED
+Coverages: 
+
+File 'cardtest1.c'
+Lines executed:75.00% of 28
+Creating 'cardtest1.c.gcov'
+
+File 'cardtest2.c'
+Lines executed:66.67% of 30
+Creating 'cardtest2.c.gcov'
+
+File 'cardtest3.c'
+Lines executed:65.79% of 38
+Creating 'cardtest3.c.gcov'
+
+File 'cardtest4.c'
+Lines executed:68.29% of 41
+Creating 'cardtest4.c.gcov'
+
+File 'unittest1.c'
+Lines executed:83.33% of 24
+Creating 'unittest1.c.gcov'
+
+File '<built-in>'
+No executable lines
+Removing '<built-in>.gcov'
+
+File 'unittest2.c'
+Lines executed:96.15% of 26
+Creating 'unittest2.c.gcov'
+
+File '<built-in>'
+No executable lines
+Removing '<built-in>.gcov'
+
+File 'unittest3.c'
+Lines executed:88.57% of 35
+Creating 'unittest3.c.gcov'
+
+File '<built-in>'
+No executable lines
+Removing '<built-in>.gcov'
+
+File 'unittest4.c'
+Lines executed:85.71% of 42
+Creating 'unittest4.c.gcov'
+
+File '<built-in>'
+No executable lines
+Removing '<built-in>.gcov'
+

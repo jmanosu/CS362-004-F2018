@@ -24,16 +24,50 @@ testAll: dominion.o testSuite.c
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
-runtests: testDrawCard 
+runtests: testDrawCard
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+unittestresults: cardtest1.c cardtest2.c cardtest3.c cardtest4.c unittest1.c unittest2.c unittest3.c unittest4.c
+	gcc -o unittest1 -g unittest1.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o unittest2 -g unittest2.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o unittest3 -g unittest3.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o unittest4 -g unittest4.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o cardtest1 -g cardtest1.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o cardtest2 -g cardtest2.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o cardtest3 -g cardtest3.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	gcc -o cardtest4 -g cardtest4.c dominion.o rngs.o -fprofile-arcs -fpic -coverage -lm -std=c99
+	printf "unittest1: \n\n" > unittestresults.out
+	./unittest1 >> unittestresults.out
+	printf "unittest2: \n\n" >> unittestresults.out
+	./unittest2 >> unittestresults.out
+	printf "unittest3: \n\n" >> unittestresults.out
+	./unittest3 >> unittestresults.out
+	printf "unittest4: \n\n" >> unittestresults.out
+	./unittest4 >> unittestresults.out
+	printf "cardtest1: \n\n" >> unittestresults.out
+	./cardtest1 >> unittestresults.out
+	printf "unittest2: \n\n" >> unittestresults.out
+	./cardtest2 >> unittestresults.out
+	printf "unittest3: \n\n" >> unittestresults.out
+	./cardtest3 >> unittestresults.out
+	printf "unittest4: \n\n" >> unittestresults.out
+	./cardtest4 >> unittestresults.out
+	printf "Coverages: \n\n" >> unittestresults.out
+	gcov cardtest1.gcda >> unittestresults.out
+	gcov cardtest2.gcda >> unittestresults.out
+	gcov cardtest3.gcda >> unittestresults.out
+	gcov cardtest4.gcda >> unittestresults.out
+	gcov unittest1.gcda >> unittestresults.out
+	gcov unittest2.gcda >> unittestresults.out
+	gcov unittest3.gcda >> unittestresults.out
+	gcov unittest4.gcda >> unittestresults.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player 
+all: playdom player
 
 clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe

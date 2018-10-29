@@ -1,0 +1,53 @@
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Jared Tence
+        -:    2: * tencej
+        -:    3: * CS362
+        -:    4: * cardtest1 smithy
+        -:    5: */
+        -:    6:
+        -:    7:
+        -:    8: #include "dominion.h"
+        -:    9: #include "dominion_helpers.h"
+        -:   10: #include <string.h>
+        -:   11: #include <stdio.h>
+        -:   12: #include <assert.h>
+        -:   13:
+        1:   14: void main(){
+        1:   15:   struct gameState * cGame = newGame();
+        1:   16:   int kingdomC[10] = {estate, duchy, province, copper, silver, gold, adventurer,
+        -:   17:               council_room, feast, gardens};
+        1:   18:   initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        1:   19:   int handsize = 0;
+        -:   20:   int i;
+        -:   21:   int * junk;
+        1:   22:   int boolError = 0;
+        1:   23:   cGame->hand[ 0 ][ cGame->handCount[0] ] = smithy;
+        1:   24:   cGame->handCount[0]++;
+        5:   25:   for(i = 0; i < 4;i++){
+        4:   26:     int pastHSize = cGame->handCount[0];
+        4:   27:     int pastDSize = cGame->discardCount[0];
+        4:   28:     int pastNActions = cGame->numActions;
+        4:   29:     cardEffect(smithy, 0,0,0, cGame, cGame->handCount[0]-1, junk);
+        4:   30:     if(cGame->handCount[0] != pastHSize + 1){
+        4:   31:       printf("ERROR smithy drawing wrong amount of cards\n");
+        4:   32:       boolError = 1;
+    #####:   33:     }else if(cGame->discardCount[0] != pastDSize + 1){
+    #####:   34:       printf("ERROR smithy discarding wrong amount of cards");
+    #####:   35:       boolError = 1;
+    #####:   36:     }else if(cGame->discard[0][cGame->discardCount[0]-1] != smithy){
+    #####:   37:       printf("ERROR smithy card not discarded");
+    #####:   38:       boolError = 1;
+        -:   39:     }
+        4:   40:     cGame->hand[ 0 ][ cGame->handCount[0] ] = smithy;
+        4:   41:     cGame->handCount[0]++;
+        -:   42:   }
+        1:   43:   if(boolError){
+        1:   44:    printf("FAILED\n");
+        -:   45:   }else{
+    #####:   46:     printf("PASSED\n");
+        -:   47:   }
+        1:   48: }

@@ -1,0 +1,63 @@
+        -:    0:Source:cardtest3.c
+        -:    0:Graph:cardtest3.gcno
+        -:    0:Data:cardtest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Jared Tence
+        -:    2: * tencej
+        -:    3: * CS362
+        -:    4: * cardtest3.c embargo
+        -:    5: */
+        -:    6:
+        -:    7:
+        -:    8: #include "dominion.h"
+        -:    9: #include "dominion_helpers.h"
+        -:   10: #include <string.h>
+        -:   11: #include <stdio.h>
+        -:   12: #include <assert.h>
+        -:   13:
+        1:   14: void main(){
+        1:   15:   struct gameState * cGame = newGame();
+        1:   16:   int kingdomC[10] = {estate, duchy, province, copper, silver, gold, adventurer,
+        -:   17:               council_room, feast, embargo};
+        1:   18:   initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        -:   19:   int i;
+        -:   20:   int * junk;
+        1:   21:   int boolError = 0;
+        1:   22:   cGame->hand[ 0 ][ cGame->handCount[0] ] = embargo;
+        1:   23:   cGame->handCount[0]++;
+        5:   24:   for(i = 0; i < 4;i++){
+        4:   25:     int pastHSize = cGame->handCount[0];
+        4:   26:     int pastDSize = cGame->discardCount[0];
+        4:   27:     int pastNActions = cGame->numActions;
+        4:   28:     int pastETokens = cGame->embargoTokens[estate];
+        4:   29:     int pastCoins = cGame->coins;
+        4:   30:     cardEffect(embargo, estate,0,0, cGame, cGame->handCount[0]-1, junk);
+        4:   31:     if(cGame->handCount[0] != pastHSize - 1){
+    #####:   32:       printf("ERROR embargo drawing wrong amount of cards\n");
+    #####:   33:       boolError = 1;
+        4:   34:     }else if(cGame->discardCount[0] != pastDSize){
+    #####:   35:       printf("ERROR embargo discarded wrong amount of cards\n");
+    #####:   36:       boolError = 1;
+        4:   37:     }else if(cGame->discard[0][cGame->discardCount[0]-1] == embargo){
+    #####:   38:       printf("ERROR embargo card not trashed\n");
+    #####:   39:       boolError = 1;
+        4:   40:     }else if(cGame->numActions != pastNActions){
+    #####:   41:       printf("ERROR embargo adding wrong amount of actions\n");
+    #####:   42:       boolError = 1;
+        4:   43:     }else if(cGame->embargoTokens[estate] != pastETokens+1){
+    #####:   44:       printf("ERROR embargo adding wrong amount of tokens\n");
+    #####:   45:       boolError = 1;
+        4:   46:     }else if(cGame->coins != pastCoins + 2){
+    #####:   47:       printf("ERROR embargo adding wrong amount of coins\n");
+    #####:   48:       boolError = 1;
+        -:   49:     }
+        4:   50:     cGame->hand[ 0 ][ cGame->handCount[0] ] = embargo;
+        4:   51:     cGame->handCount[0]++;
+        -:   52:   }
+        1:   53:   if(boolError){
+    #####:   54:    printf("FAILED\n");
+        -:   55:   }else{
+        1:   56:     printf("PASSED\n");
+        -:   57:   }
+        1:   58: }

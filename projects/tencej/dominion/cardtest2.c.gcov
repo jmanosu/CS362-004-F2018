@@ -1,0 +1,55 @@
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:cardtest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Jared Tence
+        -:    2: * tencej
+        -:    3: * CS362
+        -:    4: * cardtest2 village
+        -:    5: */
+        -:    6:
+        -:    7:
+        -:    8: #include "dominion.h"
+        -:    9: #include "dominion_helpers.h"
+        -:   10: #include <string.h>
+        -:   11: #include <stdio.h>
+        -:   12: #include <assert.h>
+        -:   13:
+        1:   14: void main(){
+        1:   15:   struct gameState * cGame = newGame();
+        1:   16:   int kingdomC[10] = {estate, duchy, province, copper, silver, gold, adventurer,
+        -:   17:               council_room, feast, gardens};
+        1:   18:   initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        -:   19:   int i;
+        -:   20:   int * junk;
+        1:   21:   cGame->hand[ 0 ][ cGame->handCount[0] ] = village;
+        1:   22:   cGame->handCount[0]++;
+        1:   23:   int boolError = 0;
+        5:   24:   for(i = 0; i < 4;i++){
+        4:   25:     int pastHSize = cGame->handCount[0];
+        4:   26:     int pastDSize = cGame->discardCount[0];
+        4:   27:     int pastNActions = cGame->numActions;
+        4:   28:     cardEffect(smithy, 0,0,0, cGame, cGame->handCount[0]-1, junk);
+        4:   29:     if(cGame->handCount[0] != pastHSize + 1){
+        4:   30:       printf("ERROR village drawing wrong amount of cards\n");
+        4:   31:       boolError = 1;
+    #####:   32:     }else if(cGame->discardCount[0] != pastDSize + 1){
+    #####:   33:       printf("ERROR village discarding wrong amount of cards");
+    #####:   34:       boolError = 1;
+    #####:   35:     }else if(cGame->discard[0][cGame->discardCount[0]-1] != village){
+    #####:   36:       printf("ERROR village card not discarded");
+    #####:   37:       boolError = 1;
+    #####:   38:     }else if(cGame->numActions != pastNActions + 1){
+    #####:   39:       printf("ERROR village adding wrong amount of actions");
+    #####:   40:       boolError = 1;
+        -:   41:     }
+        4:   42:     cGame->hand[ 0 ][ cGame->handCount[0] ] = village;
+        4:   43:     cGame->handCount[0]++;
+        -:   44:   }
+        1:   45:   if(boolError){
+        1:   46:    printf("FAILED\n");
+        -:   47:   }else{
+    #####:   48:     printf("PASSED\n");
+        -:   49:   }
+        1:   50: }

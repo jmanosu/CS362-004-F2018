@@ -1,0 +1,90 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Jared Tence
+        -:    2: * tencej
+        -:    3: * CS362
+        -:    4: * unittest4 shuffle();
+        -:    5: */
+        -:    6:
+        -:    7:
+        -:    8: #include "dominion.h"
+        -:    9: #include "dominion_helpers.h"
+        -:   10: #include <string.h>
+        -:   11: #include <stdio.h>
+        -:   12: #include <assert.h>
+        -:   13:
+        -:   14:
+        5:   15:void testshuffle(int correct, int* kingdomC, int playersC[4][10], int player, struct gameState *state){
+        -:   16:  int deck[MAX_PLAYERS][MAX_DECK];
+        5:   17:  memcpy(deck, state->deck, sizeof state->deck);
+        5:   18:  int result = shuffle(player,state);
+        5:   19:  if(result != correct){
+    #####:   20:    printf("ERROR wrong return value \n");
+    #####:   21:    return;
+        -:   22:  }
+        -:   23:
+        5:   24:  if(state->numPlayers < 2){
+        1:   25:    printf("PASSED\n");
+        1:   26:    return;
+        -:   27:  }
+        -:   28:
+        -:   29:  int i;
+       44:   30:  for(i = 0; i < 10; i++){
+       40:   31:    if(fullDeckCount(player,kingdomC[i],state) != playersC[player][i]){
+    #####:   32:      printf("ERROR loss of cards after shuffle\n");
+    #####:   33:      printf("Card %i: %i != %i\n",i, fullDeckCount(player,kingdomC[i],state), playersC[player][i]);
+    #####:   34:      return;
+        -:   35:    }
+        -:   36:  }
+        -:   37:
+        6:   38:  for(i = 0; i < state->deckCount[player]; i++){
+        6:   39:    if(deck[player][i] != state->deck[player][i]){
+        4:   40:      printf("PASSED\n");
+        4:   41:      return;
+        -:   42:    }
+        -:   43:  }
+        -:   44:
+    #####:   45:  printf("ERROR deck not shuffled\n");
+        -:   46:}
+        -:   47:
+        1:   48:int main(){
+        1:   49:  struct gameState * cGame = newGame();
+        1:   50:  int kingdomC[10] = {estate, duchy, province, copper, silver, gold, adventurer,
+        -:   51:              council_room, feast, gardens};
+        1:   52:  initializeGame(1, kingdomC, 7, cGame);
+        -:   53:  int playersC[4][10];
+        1:   54:  testshuffle(-1, kingdomC, playersC, 0, cGame);
+        -:   55:
+        1:   56:  initializeGame(MAX_PLAYERS, kingdomC, 7, cGame);
+        -:   57:  int i, j, cCard, lastCount;
+        1:   58:  cCard = 0;
+        5:   59:  for(i = 0; i < MAX_PLAYERS; i++){
+       44:   60:    for(j = 0; j < 10; j++){
+       40:   61:        playersC[i][j] = 0;
+        -:   62:    }
+        4:   63:    playersC[i][0] = 3;
+        4:   64:    playersC[i][3] = 7;
+        -:   65:  }
+        -:   66:
+        5:   67:  for(i = 0; i < MAX_PLAYERS; i++){
+      193:   68:    for(j = 0; j < 50; j++){
+      190:   69:      if(gainCard(kingdomC[cCard], cGame, 1, i) == -1){
+       10:   70:        cCard++;
+       10:   71:        if(cCard > 9){
+        1:   72:          i = MAX_PLAYERS;
+        1:   73:          j = 50;
+        1:   74:          break;
+        -:   75:        }
+        -:   76:      }else{
+      180:   77:        playersC[i][cCard]+= 1;
+        -:   78:      }
+        -:   79:    }
+        -:   80:  }
+        -:   81:
+        5:   82:  for(i = 0; i < MAX_PLAYERS; i++){
+        4:   83:    testshuffle(0, kingdomC, playersC, i, cGame);
+        -:   84:  }
+        -:   85:}
